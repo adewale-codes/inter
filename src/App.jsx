@@ -3,14 +3,13 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import AuthenticatedLayout from './components/Authentication/AuthenticatedLayout';
 import UnauthenticatedLayout from './components/Authentication/UnauthenticatedLayout';
 import SigninPage from './pages/SigninPage';
-import OverviewPage from './pages/OverviewPage'; // Import other page components as needed
+import OverviewPage from './pages/OverviewPage';
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    // Check authentication status
     const checkAuthentication = async () => {
       try {
         const sessionToken = localStorage.getItem('token');
@@ -37,7 +36,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/signin" element={<SigninPage />} />
-        {/* Define routes for other pages */}
         <Route
           path="/*"
           element={

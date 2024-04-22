@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
   const Menus = [
-    { title: "Overview", src: "Overview", to: "/overview" },
+    { title: "Overview", src: "Overview", to: "/" },
     { title: "Users", src: "Payments", to: "/users" },
     { title: "Transactions", src: "Cashback", to: "/transactions" },
-    { title: "Exchanges", src: "Exchanges", to: "/exchanges" },
-    { title: "Settings", src: "Settings", gap: true, to: "/settings" },
+    { title: "Tans status", src: "Exchanges", to: "/change-transaction-status" },
+    { title: "Acct status", src: "Settings", gap: true, to: "/change-user-account-status" },
     { title: "Log out ", src: "Logout", to: "/log" },
   ];
   return (
